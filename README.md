@@ -1,7 +1,6 @@
 # TeklaPluginTemplateWpf
 
-<img width="150" alt="Group 5PluginCube" src="https://github.com/osc-bouw/TeklaPluginTemplateWpf/assets/53224576/f0bb568b-873d-4139-9461-3a6e4bb10b50">
-
+<img width="150" alt="Group 5PluginCube" src="https://github.com/osc-bouw/TeklaPluginTemplateWpf/assets/53224576/78675aa7-e8c9-40b7-9cd7-60c3957450df">
 
 
 A base template to create a Tekla Plug-in with a wpf userinterface
