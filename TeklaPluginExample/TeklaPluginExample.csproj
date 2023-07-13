@@ -5,15 +5,16 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DC36FA05-948B-4493-AD5B-832447DE6325}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>TeklaPluginExample</RootNamespace>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OSCB</RootNamespace>
     <AssemblyName>TeklaPluginExample</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,9 +35,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Fusion">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Fusion.dll</HintPath>
+    </Reference>
+    <Reference Include="Model.Common">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Model.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OSCB.Tekla3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\OSCB.Tekla3\bin\Debug\OSCB.Tekla3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -46,16 +64,119 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Tekla.Application.Library, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\applications\Tekla\Common\Tekla.Application.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.Contracts">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.BIM.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.Data">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.BIM.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.DirectManipulation">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.BIM.DirectManipulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.Geometry">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.BIM.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.Internal">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.BIM.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.Toolkit">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.BIM.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.UI.Wpf">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.BIM.UI.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.BIM.Utilities">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.BIM.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Common.Geometry, Version=4.6.0.0, Culture=neutral, PublicKeyToken=93c0f7e4f1ca9619, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.Common.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Common.Geometry.Primitives, Version=4.5.0.0, Culture=neutral, PublicKeyToken=93c0f7e4f1ca9619, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.Common.Geometry.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Analysis, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Analysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Catalogs, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Catalogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.CustomPropertyPlugin">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.CustomPropertyPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Datatype, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Datatype.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Dialog, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\dialogs\Tekla.Structures.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Dialog.Data">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Dialog.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.DirectManipulation">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.DirectManipulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Drawing, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Geometry3d.Compatibility, Version=2021.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Geometry3d.Compatibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Model, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Plugins, Version=2022.0.0.0, Culture=neutral, PublicKeyToken=2f04dbe497b71114, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Plugins.DirectManipulation">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\plugins\Tekla.Structures.Plugins.DirectManipulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Structures.Ui.WpfKit">
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.Structures.Ui.WpfKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Technology.MsgLib, Version=2.1.0.18312, Culture=neutral, PublicKeyToken=a70cba4ef557ee03, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.Technology.MsgLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Tekla.Technology.Rkit, Version=2.1.4.14283, Culture=neutral, PublicKeyToken=a70cba4ef557ee03, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\TeklaStructures\2021.0\nt\bin\Tekla.Technology.Rkit.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <None Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    </None>
+    <Page Include="UI\OSCB_DemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\OSCB_DemoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StandaloneTestWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,12 +184,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Base\BindableBase.cs" />
+    <Compile Include="Base\RelayCommand.cs" />
+    <Compile Include="Helpers\DefineInputs.cs" />
+    <Compile Include="Helpers\GetInputs.cs" />
+    <Compile Include="Helpers\GetInputsExtensions.cs" />
+    <Compile Include="Plugin\PluginInitiator.cs" />
+    <Compile Include="UI\OSCB_DemoPage.xaml.cs">
+      <DependentUpon>OSCB_DemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OSCB_DemoView.xaml.cs">
+      <DependentUpon>OSCB_DemoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plugin\BaseData.cs" />
+    <Compile Include="Viewmodels\DemoViewViewModel.cs" />
+    <Compile Include="StandaloneTestWindow.xaml.cs">
+      <DependentUpon>StandaloneTestWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Plugin\PluginDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,13 +222,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Resource Include="Resources\Images\HeaderStyling.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\GridLook18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\OSC-bouw_logo_mini.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem copy "$(TargetPath)" "D:\TeklaStructures\2022.0\Environments\common\extensions\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
