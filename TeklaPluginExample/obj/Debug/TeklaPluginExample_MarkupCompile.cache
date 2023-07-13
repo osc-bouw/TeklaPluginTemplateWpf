@@ -1,20 +1,20 @@
 ﻿TeklaPluginExample
 
 
-winexe
+library
 C#
 .cs
 D:\ONEDRIVE_2\OneDrive - Aveco De Bondt\Software Source Code\os\TeklaWpfTemplate\TeklaPluginExample\obj\Debug\
-TeklaPluginExample
+OSCB
 none
 false
 DEBUG;TRACE
-D:\ONEDRIVE_2\OneDrive - Aveco De Bondt\Software Source Code\os\TeklaWpfTemplate\TeklaPluginExample\App.xaml
-1219584333
 
-6-502434485
-13-1310406943
-MainWindow.xaml;
+3462063939
 
-True
+16-826990375
+45-1132288969
+UI\OSCB_DemoPage.xaml;UI\OSCB_DemoView.xaml;StandaloneTestWindow.xaml;
+
+False
 
