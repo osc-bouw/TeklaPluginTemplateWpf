@@ -1,12 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Tekla.Structures.Dialog;
 using Tekla.Structures.Plugins;
@@ -34,7 +28,6 @@ namespace OSCB.Viewmodels
             }
         }
 
-
         [JsonIgnore]
         private ICommand openHelpFile;
 
@@ -48,13 +41,10 @@ namespace OSCB.Viewmodels
             }
         }
 
-
         public DemoViewViewModel()
         {
             this.OpenHelpFile = new RelayCommand(OnOpenHelpFileClicked);
         }
-
-
 
         private void OnOpenHelpFileClicked(object obj)
         {

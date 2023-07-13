@@ -1,21 +1,11 @@
 ﻿using OSCB.Viewmodels;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 //using System.Windows.Shapes;
 using Tekla.Structures;
-using Tekla.Structures.Catalogs;
 using Tekla.Structures.Datatype;
 using Tekla.Structures.Dialog;
-using Tekla.Structures.Dialog.UIControls;
-using TSM = Tekla.Structures.Model;
 
 namespace OSCB.UI
 {

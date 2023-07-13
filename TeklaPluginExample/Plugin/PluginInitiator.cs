@@ -8,8 +8,6 @@ using Tekla.Common.Geometry;
 using OSCB.Tekla3.Geometry;
 using System.Linq;
 using static Tekla.Structures.Plugins.PluginBase;
-using System;
-using Tekla.Structures.Datatype;
 using OSCB.Tekla3.Initiators;
 
 namespace OSCB.Plugin

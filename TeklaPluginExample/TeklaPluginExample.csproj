@@ -184,7 +184,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Base\BindableBase.cs" />
     <Compile Include="Base\RelayCommand.cs" />
     <Compile Include="Helpers\DefineInputs.cs" />
     <Compile Include="Helpers\GetInputs.cs" />
