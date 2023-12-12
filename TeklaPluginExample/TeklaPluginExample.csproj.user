@@ -2,6 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>D:\TeklaStructures\2022.0\bin\TeklaStructures.exe</StartProgram>
+    <StartProgram>C:\TeklaStructures\2022.0\bin\TeklaStructures.exe</StartProgram>
   </PropertyGroup>
 </Project>

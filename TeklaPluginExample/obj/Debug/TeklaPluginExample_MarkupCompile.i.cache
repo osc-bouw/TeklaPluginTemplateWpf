@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\ONEDRIVE_2\OneDrive - Aveco De Bondt\Software Source Code\os\TeklaWpfTemplate\TeklaPluginExample\obj\Debug\
+C:\source\TeklaPluginTemplateWpf\TeklaPluginExample\obj\Debug\
 OSCB
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 3462063939
 
 161624890977
-45-1132288969
+451568823373
 UI\OSCB_DemoPage.xaml;UI\OSCB_DemoView.xaml;StandaloneTestWindow.xaml;
 
 False

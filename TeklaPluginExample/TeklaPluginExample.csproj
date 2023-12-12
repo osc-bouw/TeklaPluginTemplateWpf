@@ -239,6 +239,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem copy "$(TargetPath)" "D:\TeklaStructures\2022.0\Environments\common\extensions\"</PostBuildEvent>
+    <PostBuildEvent>rem copy "$(TargetPath)" "C:\TeklaStructures\2022.0\Environments\common\extensions\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
